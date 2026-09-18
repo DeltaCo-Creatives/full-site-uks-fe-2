@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand palette: muted forest green (UKS/health/education) + warm paper background
-     + a terracotta accent for CTAs, instead of the stock bright-green/tech-blue combo. */
+  /* Brand palette: green sourced from uks-fe's brand-primary/-deep/-light (#098c4c/#05703c/#d2e8da)
+     + warm paper background + a terracotta accent for CTAs. */
   --color-ink-950: #16201a;
   --color-ink-900: #1c2a22;
   --color-ink-700: #3a4a40;
@@ -12,13 +12,13 @@
   --color-paper-100: #f4efe4;
   --color-paper-200: #ece4d3;
 
-  --color-brand-950: #0f3527;
-  --color-brand-900: #164a34;
-  --color-brand-700: #1f5d45;
-  --color-brand-600: #256e52;
-  --color-brand-500: #2f8362;
-  --color-brand-100: #e1ede4;
-  --color-brand-50: #f1f6f1;
+  --color-brand-950: #062e1c;
+  --color-brand-900: #05703c;
+  --color-brand-700: #077a41;
+  --color-brand-600: #098c4c;
+  --color-brand-500: #17a35c;
+  --color-brand-100: #d2e8da;
+  --color-brand-50: #eef7f1;
 
   --color-accent-700: #a1490f;
   --color-accent-600: #c05a17;
