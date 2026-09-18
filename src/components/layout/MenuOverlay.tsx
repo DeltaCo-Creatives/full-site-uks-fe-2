@@ -11,6 +11,13 @@ function ChildRow({ link }: { link: NavLink }) {
   const isExternal = !!link.external;
   const classes =
     "flex items-center justify-between rounded-xl px-4 py-3 text-[15px] text-ink-700 transition-colors hover:bg-brand-50 hover:text-brand-900";
+  if (link.isGroupLabel) {
+    return (
+      <span className="mt-2 block px-4 pt-2 text-xs font-semibold uppercase tracking-wide text-ink-500 first:mt-0">
+        {link.label}
+      </span>
+    );
+  }
   if (isExternal) {
     return (
       <a href={link.href} target="_blank" rel="noopener noreferrer" className={classes}>

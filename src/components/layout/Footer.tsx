@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { footerLinkGroups } from "@/content/nav";
+import { footerLinkGroups, petaNavigasiLinks } from "@/content/nav";
 import { site } from "@/content/site";
 import { Container } from "@/components/ui/Container";
 
@@ -23,28 +23,47 @@ export function Footer() {
             </address>
           </div>
 
+          <div>
+            <h3 className="text-sm font-semibold text-paper-50">Peta Navigasi</h3>
+            <ul className="mt-4 space-y-2.5">
+              {petaNavigasiLinks.map((link) => (
+                <li key={link.label}>
+                  <Link to={link.href} className="text-sm text-paper-100/70 transition-colors hover:text-paper-50">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {footerLinkGroups.map((group) => (
             <div key={group.title}>
               <h3 className="text-sm font-semibold text-paper-50">{group.title}</h3>
               <ul className="mt-4 space-y-2.5">
-                {group.links.slice(0, 6).map((link) => (
-                  <li key={link.label}>
-                    {link.external ? (
-                      <a
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm text-paper-100/70 transition-colors hover:text-paper-50"
-                      >
-                        {link.label}
-                      </a>
-                    ) : (
-                      <Link to={link.href} className="text-sm text-paper-100/70 transition-colors hover:text-paper-50">
-                        {link.label}
-                      </Link>
-                    )}
-                  </li>
-                ))}
+                {group.links.map((link) =>
+                  link.isGroupLabel ? (
+                    <li key={link.label} className="pt-2 text-xs font-semibold uppercase tracking-wide text-paper-100/50 first:pt-0">
+                      {link.label}
+                    </li>
+                  ) : (
+                    <li key={link.label}>
+                      {link.external ? (
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-paper-100/70 transition-colors hover:text-paper-50"
+                        >
+                          {link.label}
+                        </a>
+                      ) : (
+                        <Link to={link.href} className="text-sm text-paper-100/70 transition-colors hover:text-paper-50">
+                          {link.label}
+                        </Link>
+                      )}
+                    </li>
+                  ),
+                )}
               </ul>
             </div>
           ))}
