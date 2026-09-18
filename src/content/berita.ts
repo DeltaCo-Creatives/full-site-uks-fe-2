@@ -67,7 +67,7 @@ export const praktikBaikItems: NewsItem[] = [
     slug: "duta-sma-2026",
     title: "Duta SMA 2026: Dari Potensi Pelajar, Lahir Gagasan untuk Pendidikan",
     date: "2026-08-14",
-    category: "Praktik Baik",
+    category: "Umum",
     excerpt: "Kisah pelajar SMA yang mengubah potensi pribadi menjadi gagasan nyata untuk pendidikan di sekolahnya.",
     body: [
       "Ajang Duta SMA 2026 mengumpulkan pelajar dari berbagai provinsi untuk menyampaikan gagasan tentang perbaikan lingkungan belajar, termasuk penerapan kebiasaan hidup sehat di satuan pendidikan masing-masing.",
@@ -78,7 +78,7 @@ export const praktikBaikItems: NewsItem[] = [
     slug: "ruang-kelas-darurat-sorkam",
     title: "Ruang Kelas Darurat Tumbuhkan Kembali Semangat Belajar Anak-anak Sorkam",
     date: "2026-08-07",
-    category: "Praktik Baik",
+    category: "Umum",
     excerpt: "Upaya pemulihan semangat belajar anak-anak di Sorkam melalui ruang kelas darurat yang dibangun bersama.",
     body: [
       "Setelah bencana yang merusak sejumlah ruang kelas di Sorkam, satuan pendidikan bersama warga sekitar bergotong royong mendirikan ruang kelas darurat agar kegiatan belajar mengajar tetap berjalan.",
@@ -89,7 +89,7 @@ export const praktikBaikItems: NewsItem[] = [
     slug: "revitalisasi-pulau-terluar",
     title: "Setelah 21 Tahun, Revitalisasi Tembus Pulau Terluar Indonesia",
     date: "2026-08-05",
-    category: "Praktik Baik",
+    category: "Umum",
     excerpt: "Revitalisasi sekolah akhirnya menjangkau satuan pendidikan di pulau terluar Indonesia setelah dua dekade.",
     body: [
       "Setelah dua puluh satu tahun tanpa renovasi berarti, satuan pendidikan di salah satu pulau terluar Indonesia akhirnya mendapat giliran revitalisasi menyeluruh, termasuk perbaikan sarana sanitasi dan ruang UKS/M.",
@@ -100,7 +100,7 @@ export const praktikBaikItems: NewsItem[] = [
     slug: "sdn-jalmak-1-pamekasan",
     title: "Dulu Rusak Berat, Kini SDN Jalmak 1 Jadi Rujukan Festival Pendidikan di Pamekasan",
     date: "2026-05-25",
-    category: "Praktik Baik",
+    category: "Umum",
     excerpt: "SDN Jalmak 1 bertransformasi dari kondisi rusak berat menjadi sekolah rujukan festival pendidikan.",
     body: [
       "SDN Jalmak 1 di Pamekasan yang sebelumnya berada dalam kondisi rusak berat kini tampil sebagai salah satu sekolah rujukan dalam festival pendidikan tingkat kabupaten.",
@@ -111,7 +111,7 @@ export const praktikBaikItems: NewsItem[] = [
     slug: "gerakan-asri-menanamkan-kepedulian",
     title: "Menanamkan Kepedulian Lingkungan Sejak Dini melalui Gerakan ASRI di Sekolah",
     date: "2026-03-07",
-    category: "Praktik Baik",
+    category: "ASRI",
     excerpt: "Gerakan ASRI menumbuhkan kepedulian lingkungan pada peserta didik sejak usia dini.",
     body: [
       "Lewat kegiatan rutin seperti Jumat Bersih, sekolah pelaksana Gerakan ASRI mengajak peserta didik merawat kebersihan dan penghijauan lingkungan belajarnya secara konsisten.",
@@ -122,7 +122,7 @@ export const praktikBaikItems: NewsItem[] = [
     slug: "buleleng-7kaih-senam-kreasi",
     title: "Mendikdasmen Apresiasi Kabupaten Buleleng, Internalisasikan 7 KAIH melalui Senam Kreasi",
     date: "2026-02-13",
-    category: "Praktik Baik",
+    category: "7KAIH",
     excerpt: "Kabupaten Buleleng mendapat apresiasi atas internalisasi 7KAIH lewat kegiatan senam kreasi rutin.",
     body: [
       "Kabupaten Buleleng mendapat apresiasi dari Kemendikdasmen atas caranya menginternalisasi Gerakan 7 Kebiasaan Anak Indonesia Hebat (7KAIH) lewat senam kreasi yang rutin dilakukan di sekolah-sekolah.",

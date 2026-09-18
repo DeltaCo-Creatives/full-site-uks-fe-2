@@ -30,7 +30,7 @@ export const praktikBaikPage: PageContent = {
   crumbs: [{ label: "Informasi", href: "/informasi" }, { label: "Praktik Baik" }],
   blocks: [
     { type: "hero", eyebrow: "Informasi", title: "Praktik Baik", lead: "Cerita nyata dari satuan pendidikan yang menjalankan program UKS/M dan Gerakan Sekolah Sehat di daerahnya masing-masing." },
-    { type: "newsList", items: praktikBaikItems, basePath: "/informasi/praktik-baik" },
+    { type: "newsList", items: praktikBaikItems, basePath: "/informasi/praktik-baik", filterable: true },
   ],
 };
 
@@ -65,6 +65,9 @@ export const aplikasiPage: PageContent = {
       columns: 2,
       cards: [
         {
+          // TODO(content): I-05 — SIJIWA's developer attribution conflicts between sources
+          // (this page vs. the Sekolah Sehat / GSS source material). Leaving as-is until
+          // a content owner confirms which is correct; see docs/reports/content-inventory.md I-05.
           eyebrow: "Kesehatan Jiwa",
           title: "SIJIWA",
           description: "Sistem informasi kesehatan jiwa untuk pelajar, dikembangkan oleh Garuda Teknologi Indonesia.",
