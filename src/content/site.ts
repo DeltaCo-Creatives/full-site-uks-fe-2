@@ -24,4 +24,16 @@ export const site = {
     instagram: undefined as string | undefined,
     youtube: undefined as string | undefined,
   },
+  /**
+   * The four ministries behind UKS/M (docs/sitemaps/sitemap-portal-uks.md, footer row
+   * G-04's "lintas 4 Kementerian"), for Beranda's "Dikembangkan oleh /
+   * Tautan Terkait" section (B-15). Text links only — no logo files exist
+   * for this mockup, and the task explicitly rules out inventing them.
+   */
+  ministryLinks: [
+    { name: "Kementerian Pendidikan Dasar dan Menengah", href: "https://kemendikdasmen.go.id" },
+    { name: "Kementerian Kesehatan", href: "https://kemkes.go.id" },
+    { name: "Kementerian Agama", href: "https://kemenag.go.id" },
+    { name: "Kementerian Dalam Negeri", href: "https://www.kemendagri.go.id" },
+  ],
 };
