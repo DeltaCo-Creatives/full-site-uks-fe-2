@@ -7,7 +7,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { formatDate } from "@/lib/utils";
 import type { Block, NewsItem } from "@/content/types";
 
-function NewsCardShell({ item, children }: { item: NewsItem; children: ReactNode }) {
+function NewsCardShell({ item, basePath, children }: { item: NewsItem; basePath: string; children: ReactNode }) {
   const classes =
     "group flex h-full flex-col overflow-hidden rounded-2xl border border-paper-200 bg-paper-50 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card";
   // Only link through when there's an actual detail page for it (has a body) —
@@ -15,7 +15,7 @@ function NewsCardShell({ item, children }: { item: NewsItem; children: ReactNode
   // rebuild set out to avoid.
   if (item.body?.length) {
     return (
-      <Link to={`/berita/${item.slug}`} className={classes}>
+      <Link to={`${basePath}/${item.slug}`} className={classes}>
         {children}
       </Link>
     );
@@ -26,6 +26,7 @@ function NewsCardShell({ item, children }: { item: NewsItem; children: ReactNode
 export function NewsList({ block }: { block: Extract<Block, { type: "newsList" }> }) {
   const items = block.items ?? [];
   if (items.length === 0) return null;
+  const basePath = block.basePath ?? "/berita";
 
   return (
     <section className="py-12 sm:py-16">
@@ -43,7 +44,7 @@ export function NewsList({ block }: { block: Extract<Block, { type: "newsList" }
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item, i) => (
             <Reveal key={item.slug} delay={Math.min(i * 0.05, 0.25)}>
-              <NewsCardShell item={item}>
+              <NewsCardShell item={item} basePath={basePath}>
                 <div className="aspect-[16/10] w-full overflow-hidden bg-paper-200">
                   {item.image ? (
                     <img

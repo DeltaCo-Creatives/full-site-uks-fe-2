@@ -1,9 +1,9 @@
 import { beritaItems, praktikBaikItems } from "./berita";
-import { aplikasiPage, agendaPage, praktikBaikPage } from "./pages/informasi";
+import { aplikasiPage, agendaPage, informasiPage, praktikBaikPage } from "./pages/informasi";
 import { kontakPage } from "./pages/kontak";
 import { mitraPage } from "./pages/mitra";
-import { asriPage, ckgPage, kaih7Page, mbgPage } from "./pages/program";
-import { produkHukumPage, publikasiPage } from "./pages/publikasi";
+import { asriPage, ckgPage, kaih7Page, mbgPage, saihGalaKreasiPage } from "./pages/program";
+import { bukuPanduanPage, infografisPage, produkHukumPage, publikasiPage, videoPage } from "./pages/publikasi";
 import { sekolahSehatPage } from "./pages/sekolahSehat";
 import {
   manajemenPage,
@@ -12,6 +12,7 @@ import {
   tentangUksPage,
   triasPage,
 } from "./pages/uksm";
+import { uptStories } from "./upt";
 import type { PageContent } from "./types";
 
 /**
@@ -31,9 +32,14 @@ export const pageRegistry: Record<string, PageContent> = {
   "/program/mbg": mbgPage,
   "/program/ckg": ckgPage,
   "/program/asri": asriPage,
+  "/program/saih-gala-kreasi": saihGalaKreasiPage,
   "/mitra": mitraPage,
   "/publikasi": publikasiPage,
+  "/publikasi/buku-panduan": bukuPanduanPage,
+  "/publikasi/infografis": infografisPage,
+  "/publikasi/video": videoPage,
   "/publikasi/produk-hukum": produkHukumPage,
+  "/informasi": informasiPage,
   "/informasi/praktik-baik": praktikBaikPage,
   "/informasi/agenda": agendaPage,
   "/informasi/aplikasi": aplikasiPage,
@@ -55,5 +61,11 @@ export const searchIndex: SearchEntry[] = [
     group: p.crumbs[0]?.label ?? "Halaman",
   })),
   ...beritaItems.map((b) => ({ title: b.title, href: `/berita/${b.slug}`, excerpt: b.excerpt, group: "Berita" })),
-  ...praktikBaikItems.map((b) => ({ title: b.title, href: `/informasi/praktik-baik`, excerpt: b.excerpt, group: "Praktik Baik" })),
+  ...praktikBaikItems.map((b) => ({
+    title: b.title,
+    href: b.body?.length ? `/informasi/praktik-baik/${b.slug}` : "/informasi/praktik-baik",
+    excerpt: b.excerpt,
+    group: "Praktik Baik",
+  })),
+  ...uptStories.map((s) => ({ title: s.title, href: `/informasi/upt-bercerita/${s.slug}`, excerpt: s.excerpt, group: "UPT Bercerita" })),
 ];

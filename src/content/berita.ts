@@ -69,6 +69,10 @@ export const praktikBaikItems: NewsItem[] = [
     date: "2026-08-14",
     category: "Praktik Baik",
     excerpt: "Kisah pelajar SMA yang mengubah potensi pribadi menjadi gagasan nyata untuk pendidikan di sekolahnya.",
+    body: [
+      "Ajang Duta SMA 2026 mengumpulkan pelajar dari berbagai provinsi untuk menyampaikan gagasan tentang perbaikan lingkungan belajar, termasuk penerapan kebiasaan hidup sehat di satuan pendidikan masing-masing.",
+      "Para duta terpilih membawa gagasan yang lahir dari pengamatan langsung di sekolahnya, mulai dari kantin sehat, pembiasaan aktivitas fisik, hingga dukungan kesehatan mental sesama pelajar.",
+    ],
   },
   {
     slug: "ruang-kelas-darurat-sorkam",
@@ -76,6 +80,10 @@ export const praktikBaikItems: NewsItem[] = [
     date: "2026-08-07",
     category: "Praktik Baik",
     excerpt: "Upaya pemulihan semangat belajar anak-anak di Sorkam melalui ruang kelas darurat yang dibangun bersama.",
+    body: [
+      "Setelah bencana yang merusak sejumlah ruang kelas di Sorkam, satuan pendidikan bersama warga sekitar bergotong royong mendirikan ruang kelas darurat agar kegiatan belajar mengajar tetap berjalan.",
+      "Selain memulihkan akses belajar, ruang kelas darurat ini juga menjaga aspek kesehatan dan keamanan peserta didik selama masa transisi menuju pembangunan kembali fasilitas permanen.",
+    ],
   },
   {
     slug: "revitalisasi-pulau-terluar",
@@ -83,6 +91,10 @@ export const praktikBaikItems: NewsItem[] = [
     date: "2026-08-05",
     category: "Praktik Baik",
     excerpt: "Revitalisasi sekolah akhirnya menjangkau satuan pendidikan di pulau terluar Indonesia setelah dua dekade.",
+    body: [
+      "Setelah dua puluh satu tahun tanpa renovasi berarti, satuan pendidikan di salah satu pulau terluar Indonesia akhirnya mendapat giliran revitalisasi menyeluruh, termasuk perbaikan sarana sanitasi dan ruang UKS/M.",
+      "Revitalisasi ini menjadi bagian dari upaya pemerataan akses pendidikan dan kesehatan sekolah hingga ke wilayah 3T (terdepan, terluar, tertinggal).",
+    ],
   },
   {
     slug: "sdn-jalmak-1-pamekasan",
@@ -90,6 +102,10 @@ export const praktikBaikItems: NewsItem[] = [
     date: "2026-05-25",
     category: "Praktik Baik",
     excerpt: "SDN Jalmak 1 bertransformasi dari kondisi rusak berat menjadi sekolah rujukan festival pendidikan.",
+    body: [
+      "SDN Jalmak 1 di Pamekasan yang sebelumnya berada dalam kondisi rusak berat kini tampil sebagai salah satu sekolah rujukan dalam festival pendidikan tingkat kabupaten.",
+      "Transformasi ini tidak lepas dari pembenahan lingkungan sekolah yang lebih sehat dan aman, sejalan dengan pilar Pembinaan Lingkungan Sekolah Sehat dalam Trias UKS/M.",
+    ],
   },
   {
     slug: "gerakan-asri-menanamkan-kepedulian",
@@ -97,6 +113,10 @@ export const praktikBaikItems: NewsItem[] = [
     date: "2026-03-07",
     category: "Praktik Baik",
     excerpt: "Gerakan ASRI menumbuhkan kepedulian lingkungan pada peserta didik sejak usia dini.",
+    body: [
+      "Lewat kegiatan rutin seperti Jumat Bersih, sekolah pelaksana Gerakan ASRI mengajak peserta didik merawat kebersihan dan penghijauan lingkungan belajarnya secara konsisten.",
+      "Kebiasaan ini menanamkan rasa memiliki terhadap lingkungan sekolah sekaligus mendukung empat pilar ASRI: Aman, Sehat, Resik, dan Indah.",
+    ],
   },
   {
     slug: "buleleng-7kaih-senam-kreasi",
@@ -104,5 +124,9 @@ export const praktikBaikItems: NewsItem[] = [
     date: "2026-02-13",
     category: "Praktik Baik",
     excerpt: "Kabupaten Buleleng mendapat apresiasi atas internalisasi 7KAIH lewat kegiatan senam kreasi rutin.",
+    body: [
+      "Kabupaten Buleleng mendapat apresiasi dari Kemendikdasmen atas caranya menginternalisasi Gerakan 7 Kebiasaan Anak Indonesia Hebat (7KAIH) lewat senam kreasi yang rutin dilakukan di sekolah-sekolah.",
+      "Kegiatan senam kreasi ini menjadi contoh bagaimana pembiasaan sehat dapat dikemas secara menyenangkan agar konsisten diikuti oleh seluruh peserta didik.",
+    ],
   },
 ];

@@ -42,7 +42,10 @@ export const kaih7Page: PageContent = {
       type: "ctaBand",
       title: "Yuk, Praktikkan 7KAIH!",
       description: "Ajak keluarga, teman, dan sekolahmu membiasakan tujuh kebiasaan baik ini setiap hari, mulai dari hari ini.",
-      actions: [{ label: "Lihat Panduan di Publikasi", href: "/publikasi#buku-panduan", variant: "primary" }],
+      actions: [
+        { label: "Lihat Panduan di Publikasi", href: "/publikasi/buku-panduan", variant: "primary" },
+        { label: "Ikuti Lomba SAIH", href: "/program/saih-gala-kreasi", variant: "ghost" },
+      ],
     },
     {
       type: "docGrid",
@@ -138,4 +141,95 @@ export const asriPage: PageContent = {
   ],
 };
 
-export const programPages: PageContent[] = [kaih7Page, mbgPage, ckgPage, asriPage];
+export const saihGalaKreasiPage: PageContent = {
+  slug: "/program/saih-gala-kreasi",
+  title: "SAIH & Gala Kreasi Video",
+  seoDescription: "Semarak Anak Indonesia Hebat (SAIH) dan Gala Kreasi Video Gerakan Sekolah Sehat: ajang lomba dan apresiasi karya pelajar Indonesia.",
+  crumbs: [{ label: "Program Prioritas" }, { label: "SAIH & Gala Kreasi" }],
+  blocks: [
+    {
+      type: "hero",
+      eyebrow: "Program Prioritas",
+      title: "SAIH & Gala Kreasi Video",
+      lead:
+        "Dua ajang lomba dan apresiasi karya pelajar Indonesia: Semarak Anak Indonesia Hebat (SAIH), rangkaian lomba pembiasaan karakter, dan Gala Kreasi Video Gerakan Sekolah Sehat, ajang video praktik baik 5 Sehat di satuan pendidikan.",
+    },
+    {
+      type: "richText",
+      title: "Semarak Anak Indonesia Hebat (SAIH) 2025",
+      nodes: [
+        {
+          kind: "p",
+          text: "Diselenggarakan dalam rangka Hari Pendidikan Nasional 2025, sebagai tindak lanjut Surat Edaran Bersama No 1 Tahun 2025 tentang Penguatan Pendidikan Karakter melalui Pembiasaan di Satuan Pendidikan. Direktorat Jenderal PAUD, Pendidikan Dasar, dan Pendidikan Menengah bersama BBPMP dan BPMP menyelenggarakan lima lomba dengan sasaran peserta didik PAUD, SD, SMP, dan SMA di seluruh Indonesia.",
+        },
+      ],
+    },
+    {
+      type: "cardGrid",
+      title: "Lima Lomba SAIH 2025",
+      columns: 3,
+      cards: [
+        { eyebrow: "Seluruh Jenjang", title: "Lomba Senam Anak Indonesia Hebat", href: "https://s.id/InformasiLSAIH", external: true },
+        { eyebrow: "PAUD", title: "Lomba Video Cerita Anak" },
+        { eyebrow: "SD", title: "Lomba Potret Cerita" },
+        { eyebrow: "SMP", title: "Lomba Video Cerita Pendek", href: "https://s.id/ReelsvideoPendek7KAIHDitSMP_", external: true },
+        { eyebrow: "SMA", title: "Lomba Video Cerita Pendek / Vlog", href: "https://s.id/cerita7KAIH", external: true },
+      ],
+    },
+    {
+      type: "richText",
+      title: "Gala Kreasi Video Gerakan Sekolah Sehat 2024",
+      nodes: [
+        {
+          kind: "p",
+          text: "Ajang lomba video praktik baik implementasi sebagian atau seluruh fokus Gerakan Sekolah Sehat (5 Sehat) di seluruh jenjang satuan pendidikan, dengan tema \"Sekolah Sehat, Generasi Hebat\". Penghargaan diberikan kepada satuan pendidikan berdasarkan hasil penilaian video, peringkat 1 sampai 10 terbaik untuk setiap jenjang pendidikan.",
+        },
+        {
+          kind: "h3",
+          text: "Tujuan Kegiatan",
+        },
+        {
+          kind: "ul",
+          items: [
+            "Meningkatkan motivasi satuan pendidikan dalam melaksanakan implementasi atau mengaktivasi Gerakan Sekolah Sehat (5 Sehat) di satuannya.",
+            "Memberikan apresiasi kepada satuan pendidikan yang telah dapat melaksanakan implementasi atau mengaktivasi Gerakan Sekolah Sehat (5 Sehat) dengan baik di satuannya.",
+            "Memantik dan mengoptimalkan implementasi atau aktivasi pesan Gerakan Sekolah Sehat.",
+            "Ajang berbagi praktik baik implementasi atau aktivasi Gerakan Sekolah Sehat (5 Sehat) antar satuan pendidikan.",
+          ],
+        },
+        {
+          kind: "h3",
+          text: "Sasaran",
+        },
+        {
+          kind: "p",
+          text: "Satuan pendidikan berstatus negeri maupun swasta: PAUD (TK, KB, TPA, SPS), SD, SMP, SMA, SMK, SLB, serta SKB dan PKBM.",
+        },
+      ],
+    },
+    {
+      type: "docGrid",
+      title: "Unduhan Gala Kreasi 2024",
+      items: [
+        {
+          title: "Buku Petunjuk Pelaksanaan Gala Kreasi Video 2024",
+          date: "2024-01-01",
+          fileUrl:
+            "https://uks.kemendikdasmen.go.id/storage/manajemen_uks/files/images/uPpuXgH6FalmAGQhTHwv6TGqfQI8ZJMXxk4fhdoM.pdf",
+        },
+      ],
+    },
+    {
+      type: "richText",
+      title: "Gala Kreasi Video Gerakan Sekolah Sehat 2023",
+      nodes: [
+        {
+          kind: "p",
+          text: "Edisi sebelumnya dari ajang yang sama, dengan tema \"Sekolah Sehat, Generasi Hebat\" dan cakupan 3 Sehat, penilaian peringkat 1 sampai 10 terbaik untuk setiap jenjang pendidikan, dengan sasaran satuan pendidikan yang sama seperti edisi 2024.",
+        },
+      ],
+    },
+  ],
+};
+
+export const programPages: PageContent[] = [kaih7Page, mbgPage, ckgPage, asriPage, saihGalaKreasiPage];
