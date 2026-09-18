@@ -29,14 +29,17 @@ export const navSections: NavSection[] = [
       { label: "Makan Bergizi Gratis", href: "/program/mbg" },
       { label: "Cek Kesehatan Gratis", href: "/program/ckg" },
       { label: "ASRI", href: "/program/asri" },
+      { label: "SAIH & Gala Kreasi Video", href: "/program/saih-gala-kreasi" },
     ],
   },
   { label: "Mitra UKS/M", href: "/mitra" },
   {
     label: "Informasi",
     children: [
+      { label: "Semua Informasi", href: "/informasi" },
       { label: "Berita", href: "/berita" },
       { label: "Praktik Baik", href: "/informasi/praktik-baik" },
+      { label: "UPT Bercerita", href: "/informasi/upt-bercerita" },
       { label: "Agenda", href: "/informasi/agenda" },
       { label: "Aplikasi Pendukung", href: "/informasi/aplikasi" },
     ],
@@ -44,9 +47,10 @@ export const navSections: NavSection[] = [
   {
     label: "Publikasi",
     children: [
-      { label: "Buku Panduan", href: "/publikasi#buku-panduan" },
-      { label: "Infografis", href: "/publikasi#infografis" },
-      { label: "Video Edukasi", href: "/publikasi#video" },
+      { label: "Ringkasan Publikasi", href: "/publikasi" },
+      { label: "Buku Panduan", href: "/publikasi/buku-panduan" },
+      { label: "Infografis", href: "/publikasi/infografis" },
+      { label: "Video Edukasi", href: "/publikasi/video" },
       { label: "Produk Hukum", href: "/publikasi/produk-hukum" },
     ],
   },

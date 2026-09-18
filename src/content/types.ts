@@ -55,6 +55,17 @@ export interface NewsItem {
   body?: string[];
 }
 
+export interface UptStory {
+  slug: string;
+  title: string;
+  region: string;
+  category: "7KAIH" | "CKG" | "MBG" | "UKS";
+  date: string;
+  excerpt: string;
+  image?: string;
+  body?: string[];
+}
+
 export interface DocItem {
   title: string;
   description?: string;
@@ -130,7 +141,7 @@ export type Block =
     }
   | { type: "orgStructure"; title?: string; intro?: string; groups: OrgGroup[] }
   | { type: "focusGrid"; title?: string; intro?: string; items: FocusItem[]; footnote?: string }
-  | { type: "newsList"; title?: string; viewAllHref?: string; items: NewsItem[] }
+  | { type: "newsList"; title?: string; viewAllHref?: string; basePath?: string; items: NewsItem[] }
   | { type: "docGrid"; title?: string; anchorId?: string; viewAllHref?: string; items: DocItem[] }
   | { type: "videoGrid"; title?: string; anchorId?: string; viewAllHref?: string; items: VideoItem[] }
   | { type: "partnerMarquee"; title?: string; intro?: string; partners: Partner[] }

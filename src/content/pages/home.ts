@@ -120,7 +120,7 @@ export const homeBlocks: Block[] = [
   {
     type: "cardGrid",
     title: "Program Prioritas",
-    intro: "Empat program prioritas UKS/M yang berjalan lintas satuan pendidikan di seluruh Indonesia.",
+    intro: "Lima program prioritas UKS/M yang berjalan lintas satuan pendidikan di seluruh Indonesia.",
     columns: 4,
     cards: [
       {
@@ -143,6 +143,11 @@ export const homeBlocks: Block[] = [
         description: "Aman, Sehat, Resik, Indah: kampanye lingkungan sekolah yang layak dan nyaman.",
         href: "/program/asri",
       },
+      {
+        title: "SAIH & Gala Kreasi Video",
+        description: "Ajang lomba dan apresiasi karya pelajar dalam pembiasaan karakter dan Gerakan Sekolah Sehat.",
+        href: "/program/saih-gala-kreasi",
+      },
     ],
   },
   {
@@ -161,7 +166,7 @@ export const homeBlocks: Block[] = [
   {
     type: "docGrid",
     title: "Modul & Panduan Terbaru",
-    viewAllHref: "/publikasi#buku-panduan",
+    viewAllHref: "/publikasi/buku-panduan",
     items: [
       { title: "Panduan Implementasi Program Makan Bergizi Gratis di Satuan Pendidikan", date: "2026-08-24", image: "/images/publikasi/panduan-mbg.png" },
       { title: "Pedoman Pendidikan Karakter dalam Makan Bergizi Gratis", date: "2026-08-13", image: "/images/publikasi/pedoman-karakter-mbg.png" },
@@ -172,7 +177,7 @@ export const homeBlocks: Block[] = [
   {
     type: "docGrid",
     title: "Infografis",
-    viewAllHref: "/publikasi#infografis",
+    viewAllHref: "/publikasi/infografis",
     items: [
       { title: "Poster 8 MBG", date: "2026-08-24", image: "/images/publikasi/poster-mbg.png" },
       { title: "Poster 7KAIH SMP", date: "2025-12-01", image: "/images/publikasi/poster-7kaih-smp.png" },
@@ -183,7 +188,7 @@ export const homeBlocks: Block[] = [
   {
     type: "videoGrid",
     title: "Video Edukasi",
-    viewAllHref: "/publikasi#video",
+    viewAllHref: "/publikasi/video",
     items: [
       { title: "MBG: Bukan Sekedar Makan Gratis!", date: "2026-07-23", image: "/images/publikasi/video-mbg.png", youtubeUrl: "https://www.youtube.com/watch?v=PdjSymf4ZSE" },
       { title: "Penguatan Peran UKS di Satuan Pendidikan: Karawang 2025", date: "2025-11-10", image: "/images/publikasi/video-karawang.png", youtubeUrl: "https://www.youtube.com/watch?v=iWr14i9aO2k" },
