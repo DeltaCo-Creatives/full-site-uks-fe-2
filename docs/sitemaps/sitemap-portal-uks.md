@@ -2,7 +2,7 @@
 
 **Status:** Source of truth for the site structure, as of 2026-09-17.
 **Built from:** this project (`src/`, branch `rama/feat/curation-mockup-site`). Its structure is the redesign's navigation.
-**Companion:** [content-inventory.md](./content-inventory.md), which covers what goes on each page, where the content comes from, and what to do with it.
+**Companion:** [content-inventory.md](../reports/content-inventory.md), which covers what goes on each page, where the content comes from, and what to do with it.
 
 ## What this sitemap is, and isn't
 
