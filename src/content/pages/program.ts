@@ -16,11 +16,17 @@ export const kaih7Page: PageContent = {
       image: "/images/hero/7kaih.png",
     },
     {
+      // PR-03: source's two-paragraph intro (docs/content-source/program/7kaih.md, S1), both kept
+      // verbatim instead of the earlier single condensed paragraph.
       type: "richText",
       nodes: [
         {
           kind: "p",
-          text: "Gerakan ini lahir untuk menjawab tantangan zaman, mulai dari derasnya arus teknologi, gaya hidup serba instan, hingga menurunnya karakter dan kesehatan fisik-psikis anak muda. Melalui pembiasaan tujuh kebiasaan ini, 7KAIH ingin membentuk generasi yang sehat fisik, mental, dan spiritual; cerdas dan kreatif; serta peduli dan bertanggung jawab secara sosial.",
+          text: "Gerakan Tujuh Kebiasaan Anak Indonesia Hebat (7KAIH) adalah gerakan penguatan karakter yang mengajak setiap anak Indonesia membiasakan tujuh kebiasaan baik setiap hari: Bangun Pagi, Beribadah, Berolahraga, Makan Sehat dan Bergizi, Gemar Belajar, Bermasyarakat, Tidur Cepat.",
+        },
+        {
+          kind: "p",
+          text: "Gerakan ini lahir untuk menjawab tantangan zaman, mulai dari derasnya arus teknologi, gaya hidup serba instan, hingga menurunnya karakter dan kesehatan fisik-psikis anak muda. Melalui pembiasaan tujuh kebiasaan ini, 7KAIH ingin membentuk generasi yang sehat fisik, mental, dan spiritual; cerdas dan kreatif; serta peduli dan bertanggung jawab secara sosial — langkah nyata menuju Generasi Emas Indonesia 2045.",
         },
       ],
     },
@@ -45,6 +51,21 @@ export const kaih7Page: PageContent = {
       actions: [
         { label: "Lihat Panduan di Publikasi", href: "/publikasi/buku-panduan", variant: "primary" },
         { label: "Ikuti Lomba SAIH", href: "/program/saih-gala-kreasi", variant: "ghost" },
+      ],
+    },
+    // PR-03: the 4 portal Panduan (docs/content-source/program/7kaih.md line 25) are recorded by
+    // title and date only — the DEV portal source gives no file URL for any of
+    // them, unlike the separate "Buku Kiat Jitu" s.id links also in that doc
+    // (which target Guru/Orang Tua per jenjang, a different document set).
+    // TODO(content): PR-03 portal Panduan file URLs missing.
+    {
+      type: "docGrid",
+      title: "Panduan Penerapan 7KAIH",
+      items: [
+        { title: "Panduan Penerapan Gerakan 7KAIH untuk Orang Tua", date: "2025-03-29" },
+        { title: "Panduan Penerapan Gerakan 7KAIH untuk Jenjang SMA/SMK", date: "2025-03-29" },
+        { title: "Panduan Penerapan Gerakan 7KAIH untuk Jenjang PAUD", date: "2025-03-29" },
+        { title: "Panduan Penerapan Gerakan 7KAIH untuk Jenjang SD", date: "2025-03-29" },
       ],
     },
     {
@@ -82,6 +103,37 @@ export const mbgPage: PageContent = {
       ],
     },
     {
+      // Source: docs/content-source/program/mbg.md S1 "Sasaran Program" — Perpres 83/2024 Pasal 5
+      // names PAUD/dikdasmen peserta didik, balita, and ibu hamil/menyusui as
+      // scope, matched by the portal's three sasaran cards.
+      type: "cardGrid",
+      title: "Sasaran Program",
+      columns: 3,
+      cards: [
+        { title: "Peserta Didik" },
+        { title: "Anak-Anak" },
+        { title: "Ibu Hamil dan Menyusui" },
+      ],
+    },
+    {
+      type: "cardGrid",
+      title: "Dampak yang Diharapkan",
+      columns: 3,
+      cards: [
+        { title: "Status Gizi Baik", description: "Memastikan setiap individu generasi mendatang memiliki status gizi optimal sebagai modal kesehatan dan kecerdasan." },
+        { title: "Morbiditas & Mortalitas Rendah", description: "Menurunnya angka kesakitan dan kematian, terutama pada ibu, bayi, dan anak-anak." },
+        { title: "Partisipasi Sekolah Tinggi", description: "Menjamin anak-anak Indonesia dapat mengakses pendidikan dengan baik, didukung gizi yang memadai." },
+        { title: "Penurunan Biaya Pengobatan", description: "Generasi yang sehat menekan beban biaya pengobatan bagi keluarga dan negara." },
+        { title: "Peningkatan PDB Jangka Panjang", description: "Generasi sehat dan produktif berkontribusi pada pertumbuhan ekonomi yang berkelanjutan." },
+      ],
+    },
+    {
+      type: "ctaBand",
+      title: "Pelajari Program MBG Lebih Lanjut",
+      description: "Badan Gizi Nasional (BGN) mengoordinasikan pelaksanaan MBG melalui Satuan Pelayanan Pemenuhan Gizi (SPPG) di seluruh daerah.",
+      actions: [{ label: "Kunjungi Badan Gizi Nasional", href: "https://bgn.go.id", variant: "primary", external: true }],
+    },
+    {
       type: "newsList",
       title: "Berita Terkait MBG",
       viewAllHref: "/berita",
@@ -105,11 +157,27 @@ export const ckgPage: PageContent = {
       image: "/images/hero/ckg.jpg",
     },
     {
+      // PR-02: headline and closing sentence from docs/content-source/program/ckg.md S1, both
+      // omitted from the page before this pass.
+      type: "richText",
+      nodes: [
+        { kind: "h3", text: "Sekolah Mulai, Cek Kesehatan Gratis Jangan Terlewat!" },
+        {
+          kind: "p",
+          text: "Cek Kesehatan Gratis (CKG) Sekolah adalah pemeriksaan kesehatan gratis dari pemerintah untuk seluruh peserta didik kelas 1–12 atau sederajat (termasuk pesantren), yang dilaksanakan setiap tahun ajaran baru. Bukan hal yang perlu ditakuti — CKG Sekolah justru jadi langkah positif untuk mendeteksi masalah kesehatan sejak dini, sebelum berkembang jadi lebih serius, supaya siswa-siswi bisa belajar dan tumbuh dengan lebih optimal.",
+        },
+      ],
+    },
+    {
       type: "richText",
       title: "Cakupan Program",
       nodes: [
         { kind: "p", text: "CKG menyasar peserta didik jenjang kelas 1 hingga 12, termasuk santri pesantren, dengan pemeriksaan rutin tahunan di satuan pendidikan masing-masing." },
         { kind: "ul", items: ["Skrining kesehatan dasar dan antropometri", "Deteksi dini faktor risiko penyakit tidak menular", "Rujukan lanjutan bila ditemukan indikasi kesehatan tertentu"] },
+        {
+          kind: "p",
+          text: "Program ini bagian dari Cek Kesehatan Gratis (CKG) yang lebih luas, mengedepankan upaya promotif dan preventif — periksa hari ini, sehat di masa depan.",
+        },
       ],
     },
   ],
@@ -129,13 +197,42 @@ export const asriPage: PageContent = {
       image: "/images/hero/asri.jpg",
     },
     {
+      // Source: docs/content-source/program/asri.md S1 intro paragraph, verbatim.
+      type: "richText",
+      nodes: [
+        {
+          kind: "p",
+          text: "Gerakan Sekolah ASRI adalah program nasional yang mengajak seluruh warga sekolah — murid, guru, tenaga kependidikan, hingga orang tua — untuk bersama-sama menciptakan lingkungan belajar yang nyaman, bersih, hijau, dan aman. Gerakan ini merupakan bagian dari upaya pembinaan Usaha Kesehatan Sekolah/Madrasah (UKS/M) yang menekankan pada kebersihan, keindahan, dan kenyamanan lingkungan sekolah.",
+        },
+      ],
+    },
+    {
+      // Descriptions replaced with docs/content-source/program/asri.md S1's own wording for
+      // each pillar (the previous copy here didn't match any source).
       type: "cardGrid",
+      title: "Empat Pilar Utama",
       columns: 4,
       cards: [
-        { title: "Aman", description: "Lingkungan sekolah bebas dari risiko kecelakaan dan kekerasan." },
-        { title: "Sehat", description: "Sarana kesehatan dan sanitasi yang memadai di seluruh area sekolah." },
-        { title: "Resik", description: "Kebersihan lingkungan terjaga lewat pengelolaan sampah yang baik." },
-        { title: "Indah", description: "Penataan ruang dan penghijauan yang membuat sekolah nyaman ditinggali." },
+        { title: "Aman", description: "Bebas dari perundungan (bullying), infrastruktur yang tahan bencana, serta bekal keamanan digital untuk murid." },
+        { title: "Sehat", description: "Gaya hidup sehat lewat kebiasaan cuci tangan, olahraga rutin, kantin sehat, dan kawasan bebas rokok." },
+        { title: "Resik", description: "Budaya menjaga kebersihan lewat piket kelas, pemilahan sampah, daur ulang, hingga bank sampah sekolah." },
+        { title: "Indah", description: "Penataan lingkungan fisik agar rapi, ruang terbuka hijau, dan pembiasaan tertib antre." },
+      ],
+    },
+    {
+      // Source: Kemendikdasmen siaran pers 14859 (docs/content-source/program/asri.md S3),
+      // condensed to the facts of the example without dropping the attribution.
+      type: "richText",
+      title: "Contoh Praktik Baik: Jumat Bersih",
+      nodes: [
+        {
+          kind: "p",
+          text: "Sukabumi, Jawa Barat, 7 Maret 2026 — Wakil Menteri Pendidikan Dasar dan Menengah (Wamendikdasmen), Fajar Riza Ul Haq, meninjau pelaksanaan kegiatan Jumat Bersih di SD Negeri 01 Cibadak, Kabupaten Sukabumi, sebagai bagian dari implementasi Gerakan Indonesia ASRI (Aman, Sehat, Resik, dan Indah).",
+        },
+        {
+          kind: "p",
+          text: "Wamen Fajar menegaskan bahwa pembiasaan menjaga kebersihan lingkungan sekolah merupakan bagian penting dari upaya membangun karakter peserta didik. Melalui kegiatan Jumat Bersih, siswa tidak hanya diajak menjaga kebersihan lingkungan sekolah, tetapi juga dilatih untuk memiliki tanggung jawab terhadap lingkungan sekitar.",
+        },
       ],
     },
   ],
@@ -208,6 +305,9 @@ export const saihGalaKreasiPage: PageContent = {
       ],
     },
     {
+      // PR-07: docs/content-source/program/saih-gala-kreasi.md S3 "Unduh" lists 4 downloads;
+      // only Buku Petunjuk Pelaksanaan has a working URL. The other 3 have none.
+      // TODO(content): PR-07 Panduan (ppt), Surat Pernyataan and Logo file URLs missing.
       type: "docGrid",
       title: "Unduhan Gala Kreasi 2024",
       items: [
@@ -217,6 +317,9 @@ export const saihGalaKreasiPage: PageContent = {
           fileUrl:
             "https://uks.kemendikdasmen.go.id/storage/manajemen_uks/files/images/uPpuXgH6FalmAGQhTHwv6TGqfQI8ZJMXxk4fhdoM.pdf",
         },
+        { title: "Panduan Gala Kreasi Video 2024 (Segera Tersedia)", date: "2024-01-01" },
+        { title: "Surat Pernyataan Gala Kreasi Video 2024 (Segera Tersedia)", date: "2024-01-01" },
+        { title: "Logo Gala Kreasi Video 2024 (Segera Tersedia)", date: "2024-01-01" },
       ],
     },
     {
@@ -233,3 +336,56 @@ export const saihGalaKreasiPage: PageContent = {
 };
 
 export const programPages: PageContent[] = [kaih7Page, mbgPage, ckgPage, asriPage, saihGalaKreasiPage];
+
+/**
+ * Overview page for /program (docs/sitemaps/sitemap-portal-uks.md "Program" page).
+ * The sitemap models this as one page with a picker and five anchored
+ * sections; this app keeps each program on its own route instead, so this
+ * page is a minimal hub linking out to them, one card per program with a
+ * one-line description sourced from docs/content-source/program/*.md.
+ */
+export const programIndexPage: PageContent = {
+  slug: "/program",
+  title: "Program Prioritas",
+  seoDescription: "Lima program prioritas UKS/M yang berjalan lintas satuan pendidikan di seluruh Indonesia.",
+  crumbs: [{ label: "Program Prioritas" }],
+  blocks: [
+    {
+      type: "hero",
+      eyebrow: "Program Prioritas",
+      title: "Program Prioritas UKS/M",
+      lead: "Lima program prioritas yang berjalan lintas satuan pendidikan di seluruh Indonesia, dari pembiasaan karakter hingga pemenuhan gizi dan kesehatan.",
+    },
+    {
+      type: "cardGrid",
+      columns: 3,
+      cards: [
+        {
+          title: "7 Kebiasaan Anak Indonesia Hebat",
+          description: "Tujuh kebiasaan baik setiap hari untuk membentuk generasi yang sehat, cerdas, dan berkarakter.",
+          href: "/program/7kaih",
+        },
+        {
+          title: "Makan Bergizi Gratis",
+          description: "Makanan bergizi gratis dan berkelanjutan bagi peserta didik, anak-anak, dan ibu hamil-menyusui.",
+          href: "/program/mbg",
+        },
+        {
+          title: "Cek Kesehatan Gratis Sekolah",
+          description: "Pemeriksaan kesehatan gratis tahunan bagi peserta didik kelas 1–12, dari deteksi dini hingga rujukan.",
+          href: "/program/ckg",
+        },
+        {
+          title: "Gerakan Sekolah ASRI",
+          description: "Empat pilar Aman, Sehat, Resik, Indah untuk lingkungan belajar yang nyaman dan berkelanjutan.",
+          href: "/program/asri",
+        },
+        {
+          title: "SAIH & Gala Kreasi Video",
+          description: "Ajang lomba dan apresiasi karya pelajar Indonesia, dari pembiasaan karakter hingga praktik baik Sekolah Sehat.",
+          href: "/program/saih-gala-kreasi",
+        },
+      ],
+    },
+  ],
+};
