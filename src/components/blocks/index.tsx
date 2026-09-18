@@ -1,19 +1,26 @@
 import type { Block } from "@/content/types";
+import { AdvocacyList } from "./AdvocacyList";
 import { CardGrid } from "./CardGrid";
 import { ContactBlock } from "./ContactBlock";
 import { CtaBand } from "./CtaBand";
 import { DocGrid } from "./DocGrid";
 import { FocusGrid } from "./FocusGrid";
+import { FocusTabs } from "./FocusTabs";
 import { Hero } from "./Hero";
 import { HeroSlider } from "./HeroSlider";
 import { LinkGrid } from "./LinkGrid";
 import { NewsList } from "./NewsList";
 import { OrgStructure } from "./OrgStructure";
 import { PartnerMarquee } from "./PartnerMarquee";
+import { PartnerYearList } from "./PartnerYearList";
 import { PillarAccordion } from "./PillarAccordion";
 import { RichText } from "./RichText";
+import { SectionAnchor } from "./SectionAnchor";
 import { StatBand } from "./StatBand";
 import { StrataJourney } from "./StrataJourney";
+import { StrataRubric } from "./StrataRubric";
+import { SupportTable } from "./SupportTable";
+import { ThemeGroups } from "./ThemeGroups";
 import { VideoGrid } from "./VideoGrid";
 
 /**
@@ -43,8 +50,14 @@ export function BlockRenderer({ blocks }: { blocks: Block[] }) {
             return <StrataJourney key={i} block={block} />;
           case "orgStructure":
             return <OrgStructure key={i} block={block} />;
+          case "strataRubric":
+            return <StrataRubric key={i} block={block} />;
           case "focusGrid":
             return <FocusGrid key={i} block={block} />;
+          case "focusTabs":
+            return <FocusTabs key={i} block={block} />;
+          case "advocacyList":
+            return <AdvocacyList key={i} block={block} />;
           case "newsList":
             return <NewsList key={i} block={block} />;
           case "docGrid":
@@ -59,6 +72,14 @@ export function BlockRenderer({ blocks }: { blocks: Block[] }) {
             return <LinkGrid key={i} block={block} />;
           case "contactBlock":
             return <ContactBlock key={i} block={block} />;
+          case "anchor":
+            return <SectionAnchor key={i} block={block} />;
+          case "themeGroups":
+            return <ThemeGroups key={i} block={block} />;
+          case "partnerYearList":
+            return <PartnerYearList key={i} block={block} />;
+          case "supportTable":
+            return <SupportTable key={i} block={block} />;
           default:
             return null;
         }

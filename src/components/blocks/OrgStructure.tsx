@@ -29,6 +29,40 @@ export function OrgStructure({ block }: { block: Extract<Block, { type: "orgStru
                   ))}
                 </ul>
               )}
+              {group.sections?.map((section) => (
+                <div key={section.heading} className="mt-5 border-t border-paper-200 pt-4">
+                  <h4 className="font-display text-base text-ink-900">{section.heading}</h4>
+                  {section.text && <p className="mt-2 text-sm leading-relaxed text-ink-700">{section.text}</p>}
+                  {section.items && section.items.length > 0 && (
+                    <ol className="mt-2 list-decimal space-y-1.5 pl-5 text-sm leading-relaxed text-ink-700 marker:font-semibold marker:text-brand-700">
+                      {section.items.map((item, i) => (
+                        <li key={i} className="pl-1">
+                          {item}
+                        </li>
+                      ))}
+                    </ol>
+                  )}
+                </div>
+              ))}
+              {group.image && (
+                <div className="mt-5 border-t border-paper-200 pt-4">
+                  <div
+                    className="flex flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-paper-300 bg-paper-100 px-4 py-10 text-center"
+                    style={group.image.aspectRatio ? { aspectRatio: group.image.aspectRatio } : undefined}
+                  >
+                    {group.image.src ? (
+                      <img src={group.image.src} alt={group.image.alt} className="h-full w-full object-contain" />
+                    ) : (
+                      <>
+                        <span className="text-sm font-semibold text-ink-500">Gambar bagan menyusul</span>
+                        {group.image.caption && (
+                          <span className="max-w-sm text-xs leading-relaxed text-ink-400">{group.image.caption}</span>
+                        )}
+                      </>
+                    )}
+                  </div>
+                </div>
+              )}
             </Reveal>
           ))}
         </div>
