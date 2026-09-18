@@ -1,5 +1,11 @@
-import { beritaItems } from "../berita";
+import { beritaItems, praktikBaikItems } from "../berita";
+import { site } from "../site";
+import { uptStories } from "../upt";
 import type { Block, HeroSlide, PageContent } from "../types";
+
+function latestByDate<T extends { date: string }>(items: T[], count: number): T[] {
+  return [...items].sort((a, b) => b.date.localeCompare(a.date)).slice(0, count);
+}
 
 export const heroSlides: HeroSlide[] = [
   {
@@ -118,6 +124,20 @@ export const homeBlocks: Block[] = [
     items: beritaItems.slice(0, 4),
   },
   {
+    type: "newsList",
+    title: "Praktik Baik Terbaru",
+    viewAllHref: "/informasi/praktik-baik",
+    basePath: "/informasi/praktik-baik",
+    items: latestByDate(praktikBaikItems, 3),
+  },
+  {
+    type: "newsList",
+    title: "UPT Bercerita Terbaru",
+    viewAllHref: "/informasi/upt-bercerita",
+    basePath: "/informasi/upt-bercerita",
+    items: latestByDate(uptStories, 3),
+  },
+  {
     type: "cardGrid",
     title: "Program Prioritas",
     intro: "Lima program prioritas UKS/M yang berjalan lintas satuan pendidikan di seluruh Indonesia.",
@@ -215,6 +235,16 @@ export const homeBlocks: Block[] = [
       { name: "KAO Indonesia", logo: "/images/mitra/kao.png", href: "https://www.kao.com/id/id/" },
       { name: "Universitas Pendidikan Indonesia", logo: "/images/mitra/upi.png", href: "https://www.upi.edu/" },
       { name: "Oatside", logo: "/images/mitra/oatside.png", href: "https://oatside.com/id/" },
+    ],
+  },
+  {
+    type: "linkGrid",
+    title: "Dikembangkan oleh / Tautan Terkait",
+    groups: [
+      {
+        title: "Kementerian Penyelenggara",
+        links: site.ministryLinks.map((m) => ({ label: m.name, href: m.href, external: true })),
+      },
     ],
   },
   {
