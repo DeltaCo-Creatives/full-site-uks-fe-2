@@ -1,11 +1,24 @@
-import type { ReactNode } from "react";
-import { Link } from "react-router-dom";
+import { useMemo, type ReactNode } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { Container } from "@/components/ui/Container";
 import { LinkButton } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { formatDate } from "@/lib/utils";
+import { cn, formatDate } from "@/lib/utils";
 import type { Block, NewsItem } from "@/content/types";
+
+/**
+ * Legacy prod URLs filtered Praktik Baik by numeric category id
+ * (`?kategori=15` for 7KAIH, `?kategori=16` for MBG — see
+ * docs/sitemaps/sitemap-portal-uks.md §3). The rebuilt filter uses the category's own
+ * label instead, so an incoming numeric code is translated once on read.
+ */
+const LEGACY_KATEGORI_CODES: Record<string, string> = { "15": "7kaih", "16": "mbg" };
+
+function normalizeKategoriParam(raw: string | null): string | null {
+  if (!raw) return null;
+  return LEGACY_KATEGORI_CODES[raw] ?? raw;
+}
 
 function NewsCardShell({ item, basePath, children }: { item: NewsItem; basePath: string; children: ReactNode }) {
   const classes =
@@ -23,10 +36,41 @@ function NewsCardShell({ item, basePath, children }: { item: NewsItem; basePath:
   return <div className={classes}>{children}</div>;
 }
 
+const ALL_CATEGORIES = "Semua";
+
 export function NewsList({ block }: { block: Extract<Block, { type: "newsList" }> }) {
-  const items = block.items ?? [];
-  if (items.length === 0) return null;
   const basePath = block.basePath ?? "/berita";
+  const [params, setParams] = useSearchParams();
+
+  const allItems = useMemo(() => block.items ?? [], [block.items]);
+  const categories = useMemo(() => {
+    const seen = new Set<string>();
+    for (const item of allItems) {
+      if (item.category) seen.add(item.category);
+    }
+    return [...seen];
+  }, [allItems]);
+
+  const activeCategory = useMemo(() => {
+    if (!block.filterable) return null;
+    const normalized = normalizeKategoriParam(params.get("kategori"));
+    if (!normalized) return ALL_CATEGORIES;
+    const match = categories.find((c) => c.toLowerCase() === normalized.toLowerCase());
+    return match ?? ALL_CATEGORIES;
+  }, [block.filterable, categories, params]);
+
+  const items = block.filterable && activeCategory && activeCategory !== ALL_CATEGORIES
+    ? allItems.filter((item) => item.category === activeCategory)
+    : allItems;
+
+  function setCategory(category: string) {
+    const next = new URLSearchParams(params);
+    if (category === ALL_CATEGORIES) next.delete("kategori");
+    else next.set("kategori", category.toLowerCase());
+    setParams(next, { replace: true });
+  }
+
+  if (allItems.length === 0) return null;
 
   return (
     <section className="py-12 sm:py-16">
@@ -41,6 +85,29 @@ export function NewsList({ block }: { block: Extract<Block, { type: "newsList" }
             )
           }
         />
+        {block.filterable && categories.length > 1 && (
+          <div role="group" aria-label="Filter kategori" className="mb-6 flex flex-wrap gap-2">
+            {[ALL_CATEGORIES, ...categories].map((category) => (
+              <button
+                key={category}
+                type="button"
+                aria-pressed={activeCategory === category}
+                onClick={() => setCategory(category)}
+                className={cn(
+                  "rounded-full px-4 py-1.5 text-sm font-medium transition-colors",
+                  activeCategory === category
+                    ? "bg-brand-700 text-paper-50"
+                    : "bg-paper-100 text-ink-700 hover:bg-paper-200",
+                )}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        )}
+        {items.length === 0 && (
+          <p className="text-ink-500">Belum ada konten pada kategori ini.</p>
+        )}
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item, i) => (
             <Reveal key={item.slug} delay={Math.min(i * 0.05, 0.25)}>

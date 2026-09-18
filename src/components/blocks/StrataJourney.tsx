@@ -9,7 +9,7 @@ export function StrataJourney({ block }: { block: Extract<Block, { type: "strata
   if (levels.length === 0) return null;
 
   return (
-    <section className="border-y border-paper-200 bg-brand-950 py-14 text-paper-50 sm:py-20">
+    <section className="bg-brand-950 py-14 text-paper-50 sm:py-20">
       <Container>
         <SectionHeading
           eyebrow="Alat Ukur"
@@ -19,9 +19,7 @@ export function StrataJourney({ block }: { block: Extract<Block, { type: "strata
           tone="dark"
         />
 
-        <Reveal stagger className="relative mt-6 grid grid-cols-1 gap-4 sm:grid-cols-4">
-          {/* connecting line, desktop only */}
-          <div className="pointer-events-none absolute left-0 right-0 top-6 hidden h-px bg-paper-50/20 sm:block" aria-hidden="true" />
+        <Reveal stagger className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-4">
           {levels.map((level, i) => (
             <div key={level.name} className="relative rounded-2xl bg-paper-50/[0.06] p-5 ring-1 ring-paper-50/10">
               <div className="mb-3 flex items-center gap-3">
