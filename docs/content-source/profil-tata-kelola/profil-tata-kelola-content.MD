@@ -1,6 +1,6 @@
 # Profil & Tata Kelola UKS/M: Content Specification
 
-Scraped live from PROD `https://uks.kemendikdasmen.go.id` on 2026-09-17, via Inertia JSON (`X-Inertia: true`). Verbatim page text lives in [`docs/profil-tata-kelola/`](./profil-tata-kelola/), one file per page. The two org charts carry content that is not in the page text, so they are transcribed below.
+Scraped live from PROD `https://uks.kemendikdasmen.go.id` on 2026-09-17, via Inertia JSON (`X-Inertia: true`). Verbatim page text lives alongside this file, one file per page. The two org charts carry content that is not in the page text, so they are transcribed below.
 
 ## Pages
 
@@ -8,12 +8,12 @@ On PROD, these pages sit under the **UKS/M** nav group (the "Tentang UKS" pages 
 
 | # | Title | URL | File | Component | Content |
 |---|---|---|---|---|---|
-| 1 | Deskripsi Umum | `/tentang-uks/deskripsi-umum` | [deskripsi-umum.md](./profil-tata-kelola/deskripsi-umum.md) | `TentangUKS/Show` | UKS/M definition, the 3 Trias pillars with activities, Tujuan (variant wording), stratifikasi as a strategy, continuity (Tim Pelaksana + RKAS, PHBS). 2 images: UKS logo, Trias diagram |
-| 2 | Tujuan | `/tentang-uks/tujuan` | [tujuan.md](./profil-tata-kelola/tujuan.md) | `TentangUKS/Show` | One-sentence Tujuan. 1 image: stock "tujuan" icon |
-| 3 | Sasaran | `/tentang-uks/sasaran` | [sasaran.md](./profil-tata-kelola/sasaran.md) | `TentangUKS/Show` | Main targets (peserta didik, pendidik, tenaga kependidikan, masyarakat sekolah) + 6 stakeholders. 1 image: stock dartboard |
-| 4 | Struktur Organisasi Tim Pembina | `/tentang-uks/struktur-organisasi-tim-pembina` | [struktur-organisasi-tim-pembina.md](./profil-tata-kelola/struktur-organisasi-tim-pembina.md) | `TentangUKS/Show` | TP UKS/M definition, 4 government levels. 1 image: **org chart (content, transcribed below)** |
-| 5 | Struktur Organisasi Tim Pelaksana | `/tentang-uks/struktur-organisasi-timpelaksana` | [struktur-organisasi-timpelaksana.md](./profil-tata-kelola/struktur-organisasi-timpelaksana.md) | `TentangUKS/Show` | Definition, Fungsi, 4 Tugas. 1 image: **org chart (content, transcribed below)** |
-| 6 | Manajemen UKS/M | `/program/manajemen-uks-m` | [manajemen-uks-m.md](./profil-tata-kelola/manajemen-uks-m.md) | `Program/Show` | 5 management components; Monitoring (20 items) and Evaluasi (targets, sources, 3-stage process). 1 image: 5-component wheel |
+| 1 | Deskripsi Umum | `/tentang-uks/deskripsi-umum` | [deskripsi-umum.md](./deskripsi-umum.md) | `TentangUKS/Show` | UKS/M definition, the 3 Trias pillars with activities, Tujuan (variant wording), stratifikasi as a strategy, continuity (Tim Pelaksana + RKAS, PHBS). 2 images: UKS logo, Trias diagram |
+| 2 | Tujuan | `/tentang-uks/tujuan` | [tujuan.md](./tujuan.md) | `TentangUKS/Show` | One-sentence Tujuan. 1 image: stock "tujuan" icon |
+| 3 | Sasaran | `/tentang-uks/sasaran` | [sasaran.md](./sasaran.md) | `TentangUKS/Show` | Main targets (peserta didik, pendidik, tenaga kependidikan, masyarakat sekolah) + 6 stakeholders. 1 image: stock dartboard |
+| 4 | Struktur Organisasi Tim Pembina | `/tentang-uks/struktur-organisasi-tim-pembina` | [struktur-organisasi-tim-pembina.md](./struktur-organisasi-tim-pembina.md) | `TentangUKS/Show` | TP UKS/M definition, 4 government levels. 1 image: **org chart (content, transcribed below)** |
+| 5 | Struktur Organisasi Tim Pelaksana | `/tentang-uks/struktur-organisasi-timpelaksana` | [struktur-organisasi-timpelaksana.md](./struktur-organisasi-timpelaksana.md) | `TentangUKS/Show` | Definition, Fungsi, 4 Tugas. 1 image: **org chart (content, transcribed below)** |
+| 6 | Manajemen UKS/M | `/program/manajemen-uks-m` | [manajemen-uks-m.md](./manajemen-uks-m.md) | `Program/Show` | 5 management components; Monitoring (20 items) and Evaluasi (targets, sources, 3-stage process). 1 image: 5-component wheel |
 
 ## Image transcriptions
 

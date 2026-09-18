@@ -1,7 +1,7 @@
 # Content inventory: Portal UKS/M
 
 **Status:** Source of truth for what content exists and what happens to it, as of 2026-09-17.
-**Structure:** follows [sitemap-portal-uks.md](./sitemap-portal-uks.md). Each row's *New location* is a page and section in that sitemap.
+**Structure:** follows [sitemap-portal-uks.md](../sitemaps/sitemap-portal-uks.md). Each row's *New location* is a page and section in that sitemap.
 **Evidence:** finding IDs such as `B1` or `S1` point to [content-curation-report.md](./content-curation-report.md), which checks this project's content against `docs/`.
 
 ## How to read this
@@ -150,7 +150,7 @@ Prod slugs marked `/program/…` aren't recorded in `docs/`; confirm them before
 | PR-09 | Gala Kreasi 2024: video pemenang | Page | prod `/gala-kreasi/gala-kreasi-2024-video-pemenang` | — | ⬜ | decide | Loads on prod; not scraped into `docs/` (R4) |
 | PR-10 | Gala Kreasi Video 2023 | Archive | prod `/gala-kreasi/gala-kreasi-2023` | Program ▸ `saih-gala-kreasi` | 🟡 | fix | Juklak on a dead domain |
 | PR-11 | Praktik Baik 7KAIH / MBG | Filtered list | prod `/informasi/praktik-baik?kategori=15`, `=16` | Informasi ▸ praktik baik (filter) | ⬜ | add | Needs category filter (I2) |
-| PR-12 | Program curation log | Doc | — | `docs/program-curation.md` | ⬜ | add | Referenced from `program.js`; file missing (R1) |
+| PR-12 | Program curation log | Doc | — | `docs/content-source/program/program-curation.md` | ⬜ | add | Referenced from `program.js`; file missing (R1) |
 
 ## Mitra (`/mitra`)
 

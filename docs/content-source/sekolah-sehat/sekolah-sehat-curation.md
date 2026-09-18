@@ -1,6 +1,6 @@
 # Sekolah Sehat (GSS): curation log
 
-This log records what changed between the scraped PROD pages ([`docs/sekolah-sehat/`](./sekolah-sehat/), the source of truth) and the curated data in `src/data/gss.js` and `src/data/gssAdvokasi.js`. Links were checked on 2026-09-17.
+This log records what changed between the scraped PROD pages (alongside this file, the source of truth) and the curated data in `src/data/gss.js` and `src/data/gssAdvokasi.js`. Links were checked on 2026-09-17.
 
 ## Rules applied
 

@@ -35,7 +35,7 @@
 | UKS/M ▸ Trias | `trias-uks-content.MD` | ✅ Verbatim (218 of 219 content lines) | ⚪ PHBS body is still a placeholder, as the doc asks |
 | UKS/M ▸ Stratifikasi | `stratifikasi-uks-content.MD` | ✅ Rubric verbatim | 🟡 Three different strata-name schemes across the portal |
 | UKS/M ▸ Sekolah Sehat (GSS) | `sekolah-sehat/` | ✅ Full | ⚪ Null links and removed videos waiting on owners |
-| Program | `program/` | ✅ Mostly | 🟡 Referenced `docs/program-curation.md` does not exist; some source text omitted |
+| Program | `program/` | ✅ Mostly | 🟡 Referenced `docs/content-source/program/program-curation.md` does not exist; some source text omitted |
 | Mitra | `kemitraan/` | ✅ Full | ⚪ Tanoto "Modul Choice" line dropped (open item) |
 | Informasi | prod sitemap | Structure ✅ · items 🔴 | 🔴 All items are mock data; Aplikasi conflicts with the GSS source |
 | Publikasi | prod sitemap | Structure ✅ · items 🔴 | 🔴 Mock lists; a second, unsourced produk hukum list |
@@ -47,19 +47,19 @@
 
 ## 1. Beranda
 
-Source: prod sitemap §2. There is no content file. Code: [BerandaView.jsx](../src/components/BerandaView.jsx).
+Source: prod sitemap §2. There is no content file. Code: [BerandaView.jsx](../../src/components/BerandaView.jsx).
 
 | # | Finding |
 |---|---|
-| B1 🔴 | **National stats strip has no source.** `nationalMetrics` in [uksm.js](../src/data/uksm.js) shows 534.120+ satuan pendidikan, 53,4 juta peserta didik, 514 kab/kota and 14.280 paripurna. Prod's homepage has no stats strip; its only numbers are the footer visitor counter. `sekolah-sehat-curation.md` records removing similar unsourced stats from `uksm.js`, but these four remain. |
-| B2 🔴 | **Hero shows mock news.** [Hero.jsx](../src/components/Hero.jsx) builds its slides from `realNewsList` (see I1). Prod's hero is 4 decorative slides with no title, text or link. Each slide's "Baca Selengkapnya" button goes to `#berita`, not to the article. |
+| B1 🔴 | **National stats strip has no source.** `nationalMetrics` in [uksm.js](../../src/data/uksm.js) shows 534.120+ satuan pendidikan, 53,4 juta peserta didik, 514 kab/kota and 14.280 paripurna. Prod's homepage has no stats strip; its only numbers are the footer visitor counter. `sekolah-sehat-curation.md` records removing similar unsourced stats from `uksm.js`, but these four remain. |
+| B2 🔴 | **Hero shows mock news.** [Hero.jsx](../../src/components/Hero.jsx) builds its slides from `realNewsList` (see I1). Prod's hero is 4 decorative slides with no title, text or link. Each slide's "Baca Selengkapnya" button goes to `#berita`, not to the article. |
 | B3 🟠 | **Prod homepage sections with no counterpart:** Praktik Baik Terupdate (4), UPT Bercerita (4), Mitra Sekolah Sehat logo grid, Video Sekolah Sehat (3), Aplikasi Terkait UKS/M (OKY), and "Dikembangkan oleh" (4 ministry logos). |
 | B4 🟡 | **Sections that exist but differ from prod.** <br>• Program Prioritas: prod has 3 links (7KAIH, MBG, CKG). The site has a 5-card marquee that adds ASRI and SAIH, all from sourced `program.js`. <br>• Infografis: prod has 4 posters. The site shows 3 plus a "Partner N" screenshot strip with no source. <br>• Buku Panduan: prod has 4. <br>• The Stratifikasi teaser comes from dev's homepage, not prod's. |
-| B5 🟡 | **Drawer entries point at missing sections.** In [navigation.js](../src/data/navigation.js), the `beranda` drawer lists `sec-home-video`, `sec-home-tautan`, `sec-home-aplikasi` and `sec-home-mitra`, none of which BerandaView renders. The drawer also puts Program before GSS, the reverse of the page. |
+| B5 🟡 | **Drawer entries point at missing sections.** In [navigation.js](../../src/data/navigation.js), the `beranda` drawer lists `sec-home-video`, `sec-home-tautan`, `sec-home-aplikasi` and `sec-home-mitra`, none of which BerandaView renders. The drawer also puts Program before GSS, the reverse of the page. |
 
 ## 2. UKS/M ▸ Profil & Tata Kelola
 
-Source: `profil-tata-kelola/` (6 pages). Code: [profil.js](../src/data/profil.js).
+Source: `profil-tata-kelola/` (6 pages). Code: [profil.js](../../src/data/profil.js).
 
 All 6 pages are represented, and the removals listed in `profil-tata-kelola-curation.md` were carried out.
 
@@ -67,11 +67,11 @@ All 6 pages are represented, and the removals listed in `profil-tata-kelola-cura
 |---|---|
 | P1 🟡 | **Three sentences reworded as instructions.** The "Supaya UKS/M berjalan setiap tahun" list (`profilContinuity`) turns them into commands: "Tinjau…", "Bentuk…", "Terapkan…". The source says "sekolah harus memperhatikan…" and "sekolah harus membentuk…". The meaning is unchanged, but this goes past the log's own rule (typos, splits and trims only). |
 | P2 ⚪ | **Owner decisions still open** (from the curation log): <br>• which Tujuan sentence is official <br>• strata names (see S1) <br>• org chart images; both charts are still placeholders <br>• the Manajemen text's reference to "lampiran 8" |
-| P3 ⚪ | **Stale code comment.** [ProfilStruktur.jsx](../src/components/uksm/profil/ProfilStruktur.jsx) says the charts are "rebuilt as HTML from the PROD chart images", but they are image placeholders. |
+| P3 ⚪ | **Stale code comment.** [ProfilStruktur.jsx](../../src/components/uksm/profil/ProfilStruktur.jsx) says the charts are "rebuilt as HTML from the PROD chart images", but they are image placeholders. |
 
 ## 3. UKS/M ▸ Trias
 
-Source: `trias-uks-content.MD`, scraped from dev. Code: [trias.js](../src/data/trias.js).
+Source: `trias-uks-content.MD`, scraped from dev. Code: [trias.js](../../src/data/trias.js).
 
 **218 of 219 content lines are verbatim.** All 16 sub-programs are present, including Dokter Kecil's Tugas list and Pendidikan Gizi's Tautan Penting. The one miss is PHBS's description, which is left out on purpose (T1). The script's other misses are the doc's own editorial notes.
 
@@ -82,7 +82,7 @@ Source: `trias-uks-content.MD`, scraped from dev. Code: [trias.js](../src/data/t
 
 ## 4. UKS/M ▸ Stratifikasi
 
-Source: `stratifikasi-uks-content.MD`, from dev. Code: [stratifikasi.js](../src/data/stratifikasi.js).
+Source: `stratifikasi-uks-content.MD`, from dev. Code: [stratifikasi.js](../../src/data/stratifikasi.js).
 
 The intro, the 4 Tujuan cards, Cara Penilaian and the full SD rubric (4 categories × 4 strata) are verbatim. The page labels the rubric "Jenjang SD".
 
@@ -94,7 +94,7 @@ The intro, the 4 Tujuan cards, Cara Penilaian and the full SD rubric (4 categori
 
 ## 5. UKS/M ▸ Sekolah Sehat (GSS)
 
-Source: `sekolah-sehat/` (7 pages). Code: [gss.js](../src/data/gss.js), [gssAdvokasi.js](../src/data/gssAdvokasi.js).
+Source: `sekolah-sehat/` (7 pages). Code: [gss.js](../../src/data/gss.js), [gssAdvokasi.js](../../src/data/gssAdvokasi.js).
 
 Every text block was found; the few script misses were icon markers or slightly reworded lines. The lists are complete: 18 produk hukum and 20 campaign materials, in source order. The Gerakan Madrasah Sehat external link is in the GSS hero.
 
@@ -105,20 +105,20 @@ Every text block was found; the few script misses were icon markers or slightly 
 
 ## 6. Program
 
-Source: `program/` (mbg, ckg, 7kaih, asri, saih-gala-kreasi). Code: [program.js](../src/data/program.js).
+Source: `program/` (mbg, ckg, 7kaih, asri, saih-gala-kreasi). Code: [program.js](../../src/data/program.js).
 
 All 5 programs are present. The facts, tables, timeline, pillars and links match the extracts. Links the docs record as dead are `url: null`: Dasbor MBG, ckg.kemkes.go.id, the SEB JDIH page, the PAUD and SD SAIH links, and the Gala 2023 juklak. ASRI is dev-only but has a content file, so it stays.
 
 | # | Finding |
 |---|---|
-| R1 🟡 | **Missing curation log.** The `program.js` header says decisions and link checks are in `docs/program-curation.md`, which **does not exist**. Unlike every other section, Program has no curation log. |
+| R1 🟡 | **Missing curation log.** The `program.js` header says decisions and link checks are in `docs/content-source/program/program-curation.md`, which **does not exist**. Unlike every other section, Program has no curation log. |
 | R2 🟡 | **Condensed, not verbatim.** Examples: <br>• The 7KAIH habit texts are shortened. Bangun Pagi drops "…yang berkontribusi pada kualitas hidup yang lebih baik"; Beribadah drops "Bukan sekadar ritual"; Berolahraga's text is rewritten. <br>• The CKG lead drops "Bukan hal yang perlu ditakuti…". <br>No facts change. |
 | R3 🟠 | **Source text omitted.** <br>• **CKG:** the headline "Sekolah Mulai, Cek Kesehatan Gratis Jangan Terlewat!", and "Program ini bagian dari Cek Kesehatan Gratis (CKG) yang lebih luas… periksa hari ini, sehat di masa depan." <br>• **7KAIH:** the second intro paragraph (its content is partly in "Mengapa gerakan ini ada"), the "Yuk, Praktikkan 7KAIH!" call to action, the 4 portal Panduan (Orang Tua, SMA/SMK, PAUD, SD) and the 4 Poster 7KAIH infografis. <br>• **Gala Kreasi 2024:** the 4 "Tujuan Kegiatan", and the Panduan (ppt), Surat Pernyataan and Logo downloads. The doc gives no URLs for the last three. |
 | R4 🟠 | **Prod Program menu items with no counterpart:** <br>• Praktik Baik 7KAIH and Praktik Baik MBG (the Praktik Baik list filtered by category; see I2) <br>• Gala Kreasi 2024 Pengumuman Pemenang and Video Pemenang (both load on prod, but `docs/` has no content for them) |
 
 ## 7. Mitra
 
-Source: `kemitraan/` (5 pages). Code: [mitra.js](../src/data/mitra.js).
+Source: `kemitraan/` (5 pages). Code: [mitra.js](../../src/data/mitra.js).
 
 All text found. The 20 / 30 / 7 partner lists and the 6 support records are present, as are the status-only pendaftaran and the removals listed in `kemitraan-curation.md`.
 
@@ -130,7 +130,7 @@ All text found. The 20 / 30 / 7 partner lists and the 6 support records are pres
 
 ## 8. Informasi
 
-Source: prod sitemap (Berita, Praktik Baik, UPT Bercerita, Agenda, Aplikasi). Code: [informasi.js](../src/data/informasi.js), [site.js](../src/data/site.js).
+Source: prod sitemap (Berita, Praktik Baik, UPT Bercerita, Agenda, Aplikasi). Code: [informasi.js](../../src/data/informasi.js), [site.js](../../src/data/site.js).
 
 Structure ✅: all 5 prod pages exist as panels.
 
@@ -142,7 +142,7 @@ Structure ✅: all 5 prod pages exist as panels.
 
 ## 9. Publikasi
 
-Source: prod sitemap (Produk Hukum, Buku Panduan, Infografis, Video). Code: [publikasi.js](../src/data/publikasi.js).
+Source: prod sitemap (Produk Hukum, Buku Panduan, Infografis, Video). Code: [publikasi.js](../../src/data/publikasi.js).
 
 Structure ✅: 4 sections map to the 4 prod pages.
 
@@ -153,7 +153,7 @@ Structure ✅: 4 sections map to the 4 prod pages.
 
 ## 10. Tautan
 
-Source: prod sitemap §1. Code: `tautanGroups` in [site.js](../src/data/site.js).
+Source: prod sitemap §1. Code: `tautanGroups` in [site.js](../../src/data/site.js).
 
 ✅ 4 groups with 11 links, matching prod's grouping and count.
 
@@ -163,7 +163,7 @@ Source: prod sitemap §1. Code: `tautanGroups` in [site.js](../src/data/site.js)
 
 ## 11. Kontak and FAQ
 
-Source: the prod sitemap, but prod's `/kontak` and `/faq` both **crash**, so there is no source content. Code: [KontakView.jsx](../src/components/KontakView.jsx), `contactInfo` and `faqsList` in [site.js](../src/data/site.js).
+Source: the prod sitemap, but prod's `/kontak` and `/faq` both **crash**, so there is no source content. Code: [KontakView.jsx](../../src/components/KontakView.jsx), `contactInfo` and `faqsList` in [site.js](../../src/data/site.js).
 
 | # | Finding |
 |---|---|
@@ -175,7 +175,7 @@ Source: the prod sitemap, but prod's `/kontak` and `/faq` both **crash**, so the
 
 | # | Finding |
 |---|---|
-| C1 🔴 | **Footer copy has no source.** [Footer.jsx](../src/components/Footer.jsx): <br>• "Portal Resmi… lintas 4 Kementerian" <br>• "Sinergi 4 Kementerian untuk Indonesia Emas 2045" <br>• "Sekretariat Pembina UKS/M Pusat" <br>• the address and phone from K1 |
+| C1 🔴 | **Footer copy has no source.** [Footer.jsx](../../src/components/Footer.jsx): <br>• "Portal Resmi… lintas 4 Kementerian" <br>• "Sinergi 4 Kementerian untuk Indonesia Emas 2045" <br>• "Sekretariat Pembina UKS/M Pusat" <br>• the address and phone from K1 |
 | C2 🟠 | **Prod footer items with no counterpart:** the pauddikdasmen.kemdikbud.go.id link and the visitor-count widget. |
 | C3 🟡 | **Stale mobile menu label.** It says "Program Prioritas (MBG, CKG, ASRI)" but the page has 5 programs, including 7KAIH and SAIH. |
 
@@ -196,4 +196,4 @@ Grouped so one answer closes several findings.
 ## Stale docs
 
 - **`curation-vs-dev-sitemap.md` and `implementation-plan-missing-from-dev.md`** treat **dev** as the source of truth. They describe an older `src/`, with Dokcil and Sarpras programs and Mitra testimonials that no longer exist. Both are superseded by this report and the per-section curation logs.
-- **`docs/program-curation.md`** is referenced from code but missing (R1).
+- **`docs/content-source/program/program-curation.md`** is referenced from code but missing (R1).

@@ -1,6 +1,6 @@
 # `/sekolah-sehat/*` — Content Specification
 
-Scraped live from `https://uks.kemendikdasmen.go.id/sekolah-sehat/{slug}` (PROD) on 2026-09-17, via Inertia JSON (`X-Inertia: true`). Verbatim page content lives in [`docs/sekolah-sehat/`](./sekolah-sehat/), one file per page.
+Scraped live from `https://uks.kemendikdasmen.go.id/sekolah-sehat/{slug}` (PROD) on 2026-09-17, via Inertia JSON (`X-Inertia: true`). Verbatim page content lives alongside this file, one file per page.
 
 ## Pages
 
@@ -9,13 +9,13 @@ The **Sekolah Sehat** menu has 8 entries. 7 are internal pages, all rendered by 
 | # | Menu title | URL | File | Content |
 |---|---|---|---|---|
 | — | Gerakan Madrasah Sehat | `https://madrasah.kemenag.go.id/madrasahsehat/` | — | External link (Kemenag) |
-| 1 | Gerakan Sekolah Sehat | `/sekolah-sehat/gerakan-sekolah-sehat` | [gerakan-sekolah-sehat.md](./sekolah-sehat/gerakan-sekolah-sehat.md) | Definition, 5 focus areas, manfaat, sasaran, 3 videos, mitra logo |
-| 2 | Sehat Bergizi | `/sekolah-sehat/sehat-bergizi` | [sehat-bergizi.md](./sekolah-sehat/sehat-bergizi.md) | 4 kegiatan, Isi Piringku, 10 pedoman gizi seimbang, 4 komponen kantin sehat, 3 downloads |
-| 3 | Sehat Fisik | `/sekolah-sehat/sehat-fisik` | [sehat-fisik.md](./sekolah-sehat/sehat-fisik.md) | 5 kegiatan, SKJ + its management (frekuensi/waktu/sarana/durasi/instruktur), 4L, peregangan, 4 downloads |
-| 4 | Sehat Imunisasi | `/sekolah-sehat/sehat-imunisasi` | [sehat-imunisasi.md](./sekolah-sehat/sehat-imunisasi.md) | 3 kegiatan, BIAS, sasaran/jenis/jadwal, 5 downloads, 2 videos |
-| 5 | Sehat Jiwa | `/sekolah-sehat/sehat-jiwa` | [sehat-jiwa.md](./sekolah-sehat/sehat-jiwa.md) | 5 kegiatan, sosialisasi topics, SIJIWA app, anti-bullying goals, 3 downloads |
-| 6 | Sehat Lingkungan | `/sekolah-sehat/sehat-lingkungan` | [sehat-lingkungan.md](./sekolah-sehat/sehat-lingkungan.md) | 7 kegiatan, CTPS + 5 steps, 3R, 3 downloads |
-| 7 | Bahan Advokasi GSS | `/sekolah-sehat/bahan-advokasi` | [bahan-advokasi.md](./sekolah-sehat/bahan-advokasi.md) | 18 produk hukum + 20 campaign materials (plain link lists) |
+| 1 | Gerakan Sekolah Sehat | `/sekolah-sehat/gerakan-sekolah-sehat` | [gerakan-sekolah-sehat.md](./gerakan-sekolah-sehat.md) | Definition, 5 focus areas, manfaat, sasaran, 3 videos, mitra logo |
+| 2 | Sehat Bergizi | `/sekolah-sehat/sehat-bergizi` | [sehat-bergizi.md](./sehat-bergizi.md) | 4 kegiatan, Isi Piringku, 10 pedoman gizi seimbang, 4 komponen kantin sehat, 3 downloads |
+| 3 | Sehat Fisik | `/sekolah-sehat/sehat-fisik` | [sehat-fisik.md](./sehat-fisik.md) | 5 kegiatan, SKJ + its management (frekuensi/waktu/sarana/durasi/instruktur), 4L, peregangan, 4 downloads |
+| 4 | Sehat Imunisasi | `/sekolah-sehat/sehat-imunisasi` | [sehat-imunisasi.md](./sehat-imunisasi.md) | 3 kegiatan, BIAS, sasaran/jenis/jadwal, 5 downloads, 2 videos |
+| 5 | Sehat Jiwa | `/sekolah-sehat/sehat-jiwa` | [sehat-jiwa.md](./sehat-jiwa.md) | 5 kegiatan, sosialisasi topics, SIJIWA app, anti-bullying goals, 3 downloads |
+| 6 | Sehat Lingkungan | `/sekolah-sehat/sehat-lingkungan` | [sehat-lingkungan.md](./sehat-lingkungan.md) | 7 kegiatan, CTPS + 5 steps, 3R, 3 downloads |
+| 7 | Bahan Advokasi GSS | `/sekolah-sehat/bahan-advokasi` | [bahan-advokasi.md](./bahan-advokasi.md) | 18 produk hukum + 20 campaign materials (plain link lists) |
 
 ## Shared structure (the 5 "Sehat …" pages)
 

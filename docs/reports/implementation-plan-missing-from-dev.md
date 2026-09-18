@@ -1,7 +1,7 @@
 # Implementation plan — pages and sections missing from DEV
 
 **Scope:** the 15 items in [`curation-vs-dev-sitemap.md` §A](./curation-vs-dev-sitemap.md#a-missing-entirely--in-dev-nothing-here), all absent from this project.
-**Reference:** [`sitemap-dev-uks.MD`](./sitemap-dev-uks.MD) (`portal-uks.demo.or.id`)
+**Reference:** [`sitemap-dev-uks.MD`](../sitemaps/sitemap-dev-uks.MD) (`portal-uks.demo.or.id`)
 **Out of scope:** §B (thin sections), §C (extras to keep/cut), §D1 (adding a router). Each needs its own call.
 
 ---

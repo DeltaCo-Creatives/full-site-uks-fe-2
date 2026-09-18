@@ -1,6 +1,6 @@
 # Curation — this project vs. Sitemap [DEV]
 
-**Source of truth:** [`docs/sitemap-dev-uks.MD`](./sitemap-dev-uks.MD) (`portal-uks.demo.or.id`, the V2 redesign)
+**Source of truth:** [`docs/sitemap-dev-uks.MD`](../sitemaps/sitemap-dev-uks.MD) (`portal-uks.demo.or.id`, the V2 redesign)
 **Audited:** `src/` on branch `rama/feat/curation-mockup-site`
 **Method:** every dev nav destination and homepage section from the sitemap, checked against the views, sections and data in `src/App.jsx`, `src/components/*`, `src/data/portalData.js`.
 
@@ -85,7 +85,7 @@ These aren't bugs; they're content this project has that the dev source of truth
 
 ## E. Three-way check: project vs. DEV vs. PROD
 
-Added after checking [`docs/sitemap-prod-uks.MD`](./sitemap-prod-uks.MD). Purpose: tell apart what the project is missing **no matter which site is the reference** from what depends on the DEV-vs-PROD decision.
+Added after checking [`docs/sitemap-prod-uks.MD`](../sitemaps/sitemap-prod-uks.MD). Purpose: tell apart what the project is missing **no matter which site is the reference** from what depends on the DEV-vs-PROD decision.
 
 Key: ✅ has it · ⚠️ partial/thin · ❌ missing · — not on that site · 🪧 stub · 💥 crashes · 🔗 external
 
@@ -97,7 +97,7 @@ Key: ✅ has it · ⚠️ partial/thin · ❌ missing · — not on that site ·
 | Struktur Organisasi (Tim Pembina / Tim Pelaksana) | inside `/tentang-uks` | 2 separate pages | ✅ 2 tabs in `uksm-profil` | both |
 | Stratifikasi UKS/M | internal page | 🔗 `stratifikasiuks.org` | ✅ own page, UKS/M ▸ 3 (was a Profil section until 2026-09-17) | **DEV** |
 | Manajemen UKS/M | page | page | ✅ section | both |
-| Trias — 3 pillars | `/trias-uks`, **7 / 4 / 5** sub-programs (the sitemap's "7 / 5 / 5" is wrong, see [`trias-uks-content.MD`](./trias-uks-content.MD)) | 16 separate pages, **7 / 4 / 5** | ✅ `uksm-trias`: dev's full content as of 2026-09-17, shown with this project's tabs and panels; PHBS is a placeholder | **DEV** (content) |
+| Trias — 3 pillars | `/trias-uks`, **7 / 4 / 5** sub-programs (the sitemap's "7 / 5 / 5" is wrong, see [`trias-uks-content.MD`](../content-source/trias-uks-content.MD)) | 16 separate pages, **7 / 4 / 5** | ✅ `uksm-trias`: dev's full content as of 2026-09-17, shown with this project's tabs and panels; PHBS is a placeholder | **DEV** (content) |
 | Sekolah Sehat hub (GSS + 5 Sehat + Bahan Advokasi) | — | ✅ 7 pages (hub URL itself ❌ 404) | ✅ `uksm-gss` | **PROD** |
 | ↳ Gerakan Madrasah Sehat | — | 🔗 `madrasah.kemenag.go.id` | ❌ | — |
 | ↳ Mitra Sekolah Sehat | — | ✅ page | ❌ | — |

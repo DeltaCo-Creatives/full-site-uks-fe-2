@@ -1,6 +1,6 @@
 # Kemitraan UKS/M: Curation Log
 
-Source of truth: the PROD Mitra pages, scraped 2026-09-17 from the Inertia page data. The verbatim text is in [`kemitraan/`](./kemitraan/). The curated data is in `src/data/mitra.js` and the page is in `src/components/MitraView.jsx` and `src/components/mitra/`.
+Source of truth: the PROD Mitra pages, scraped 2026-09-17 from the Inertia page data. The verbatim text is alongside this file. The curated data is in `src/data/mitra.js` and the page is in `src/components/MitraView.jsx` and `src/components/mitra/`.
 
 | PROD page | What it holds | Used |
 |---|---|---|
